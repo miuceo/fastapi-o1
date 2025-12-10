@@ -1,0 +1,211 @@
+{
+    "companies": [
+        {
+            "id": 1,
+            "company": "NextGen Innovations"
+        },
+        {
+            "id": 2,
+            "company": "Silk Road Technologies"
+        },
+        {
+            "id": 3,
+            "company": "EcoBuild Group"
+        },
+        {
+            "id": 4,
+            "company": "UzTrade International"
+        },
+        {
+            "id": 5,
+            "company": "Digital Future Labs"
+        }
+    ],
+    "employees": [
+        {
+            "id": 1,
+            "fullname": "Sardor Qodirov",
+            "year": 1990,
+            "company_id": 1
+        },
+        {
+            "id": 2,
+            "fullname": "Malika Sayfullayeva",
+            "year": 1991,
+            "company_id": 2
+        },
+        {
+            "id": 3,
+            "fullname": "Javlon Ergashev",
+            "year": 1992,
+            "company_id": 3
+        },
+        {
+            "id": 4,
+            "fullname": "Sevinch To\u2018laganova",
+            "year": 1993,
+            "company_id": 4
+        },
+        {
+            "id": 5,
+            "fullname": "Shuhrat Jo\u2018rayev",
+            "year": 1994,
+            "company_id": 5
+        },
+        {
+            "id": 6,
+            "fullname": "Nigora Karimova",
+            "year": 1995,
+            "company_id": 1
+        },
+        {
+            "id": 7,
+            "fullname": "Abbos Xolmatov",
+            "year": 1996,
+            "company_id": 2
+        },
+        {
+            "id": 8,
+            "fullname": "Lobar Xasanova",
+            "year": 1997,
+            "company_id": 3
+        },
+        {
+            "id": 9,
+            "fullname": "Rustam Mamatqulov",
+            "year": 1998,
+            "company_id": 4
+        },
+        {
+            "id": 10,
+            "fullname": "Kamola Yusupova",
+            "year": 1999,
+            "company_id": 5
+        },
+        {
+            "id": 11,
+            "fullname": "Sherzod Olimjonov",
+            "year": 2000,
+            "company_id": 2
+        },
+        {
+            "id": 12,
+            "fullname": "Madina Tursunova",
+            "year": 1992,
+            "company_id": 5
+        },
+        {
+            "id": 13,
+            "fullname": "Farrux Raxmonov",
+            "year": 1994,
+            "company_id": 4
+        },
+        {
+            "id": 14,
+            "fullname": "Mohira Abduqodirova",
+            "year": 1996,
+            "company_id": 3
+        },
+        {
+            "id": 15,
+            "fullname": "Olimjon Sattorov",
+            "year": 1998,
+            "company_id": 1
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Electronics"
+        },
+        {
+            "id": 2,
+            "name": "Home appliances"
+        },
+        {
+            "id": 3,
+            "name": "Sports"
+        },
+        {
+            "id": 4,
+            "name": "Books"
+        },
+        {
+            "id": 5,
+            "name": "Clothing"
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "Smartphone X10",
+            "year": 2021,
+            "category_id": 1
+        },
+        {
+            "id": 2,
+            "name": "Laptop Pro 15",
+            "year": 2022,
+            "category_id": 1
+        },
+        {
+            "id": 3,
+            "name": "Air Conditioner CoolMax",
+            "year": 2020,
+            "category_id": 2
+        },
+        {
+            "id": 4,
+            "name": "Vacuum Cleaner Turbo",
+            "year": 2023,
+            "category_id": 2
+        },
+        {
+            "id": 5,
+            "name": "Football UltraGrip",
+            "year": 2021,
+            "category_id": 3
+        },
+        {
+            "id": 6,
+            "name": "Tennis Racket PowerShot",
+            "year": 2022,
+            "category_id": 3
+        },
+        {
+            "id": 7,
+            "name": "Fantasy Novel \u2013 Dragon\u2019s Path",
+            "year": 2019,
+            "category_id": 4
+        },
+        {
+            "id": 8,
+            "name": "Programming Book \u2013 Python Mastery",
+            "year": 2023,
+            "category_id": 4
+        },
+        {
+            "id": 9,
+            "name": "Men\u2019s Jacket WinterPro",
+            "year": 2022,
+            "category_id": 5
+        },
+        {
+            "id": 10,
+            "name": "Women\u2019s Dress SpringLine",
+            "year": 2023,
+            "category_id": 5
+        },
+        {
+            "id": 11,
+            "name": "Iphone 16e",
+            "category_id": 1
+        },
+        {
+            "id": 13,
+            "year": 2022,
+            "name": "Macbook Pro M2 MAX",
+            "category_id": 1
+        }
+    ]
+}
