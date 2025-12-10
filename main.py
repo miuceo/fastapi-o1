@@ -94,6 +94,87 @@ def delete_product(id: int):
         "message": "Deleted"
     }
 
+@app.get('/employees/')
+def get_all_employees():
+    employees = get_all_data().get('employees', [])
+    return employees
+
+@app.post('/employees/')
+def post_new_product(data: dict):
+    fullname = data.get('fullname')
+    year = data.get('year')
+    company_id = data.get('company_id')
+
+    employees = get_all_data().get('employees', [])
+    companies = get_all_data().get('companies', [])
+
+    if not validate_fullname(fullname) or not validate_year(year) or not company_id in [company['id'] for company in companies]:
+        raise HTTPException(status_code=400, detail="Please enter right data!")
+
+    all_data = get_all_data()
+    all_data['employees'].append(
+        {
+            "id": max([employee['id'] for employee in employees], default=0) + 1,
+            "year": year,
+            "fullname": fullname,
+            "company_id": company_id,
+        }
+    )
+
+    if write_data(all_data):
+        return {
+            "message": "Created"
+        }
+    else:
+        raise HTTPException(status_code=502, detail="Bad Gateway")
+
+@app.get('/employees/{id}')
+def get_single_emplyee(id: int):
+    employee = next((employee for employee in get_all_data().get('employees', []) if employee['id'] == id), None)
+
+    if employee is None:
+        raise HTTPException(
+            status_code=404,
+            detail = 'Employee with this id not found!'
+        )
+
+    return employee
+
+@app.put('/employees/{id}')
+def put_employee(id: int, data: Dict[str, Any]):
+    if not update(id, data=data, model='employee'):
+        raise HTTPException(status_code=400, detail='Please enter correct data!')
+    return {
+        "message": "Updated"
+    }
+
+@app.patch('/employees/{id}')
+def patch_employee(id: int, data: Dict[str, Any]):
+    if not update(id, data=data, model='employee', partial=True):
+        raise HTTPException(status_code=400, detail='Please correct data!')
+    return {
+        "message": "Updated"
+    }
+
+@app.delete('/employees/{id}')
+def delete_employee(id: int):
+    all_data = get_all_data()
+    employees = all_data.get('employees', [])
+    employee = next((product for product in employees if product['id'] == id), None)
+
+    if not employee:
+        raise HTTPException(status_code=404, detail='An employee with this id not found!')
+
+    employees.remove(employee)
+    status = write_data(all_data)
+
+    if not status:
+        raise HTTPException(status_code=400, detail='An eror occured, try again!')
+
+    return {
+        "message": "Deleted"
+    }
+
 
 if __name__ == "__main__":
     uvicorn.run(app)
